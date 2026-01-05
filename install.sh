@@ -17,5 +17,11 @@ fi
 # Create a symbolic link from the repo to your home dir
 ln -s $PWD/.zshrc $HOME/.zshrc
 
-# 3. Link Custom Plugins/Themes (if you have them)
+# 3. Link powerlevel10k config
+if [ -f "$HOME/.p10k.zsh" ]; then
+    mv "$HOME/.p10k.zsh" "$HOME/.p10k.zsh.bak"
+fi
+ln -s $PWD/.p10k.zsh $HOME/.p10k.zsh
+
+# 4. Link Custom Plugins/Themes (if you have them)
 ln -s $PWD/custom $HOME/.oh-my-zsh/custom
