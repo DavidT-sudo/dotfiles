@@ -18,4 +18,4 @@ fi
 ln -s $PWD/.zshrc $HOME/.zshrc
 
 # 3. Link Custom Plugins/Themes (if you have them)
-# cp -r $PWD/custom/* $HOME/.oh-my-zsh/custom/
+ln -s $PWD/custom $HOME/.oh-my-zsh/custom
